@@ -4,7 +4,7 @@ A hybrid pipeline that extracts entities, relationships, and personality traits 
 This project combines **spaCy** for structured NLP extraction and an **LLM** for reasoning-based enrichment to produce a contextual, explainable graph of human interactions.
 ## 🤖 LLM Session (ChatGPT)
 You can view the full ChatGPT conversation that guided this project here:  
-🔗 [View LLM Session](https://chatgpt.com/share/your-session-link)
+🔗 [View LLM Session](https://chatgpt.com/share/69021b99-d260-800a-bbc1-6d0583970ad9)
 
 ---
 
