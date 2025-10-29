@@ -1,12 +1,12 @@
-Here’s a clean, professional **README template** for your GitHub repository — tailored for your Knowledge Graph assignment project.
-It’s concise, easy to follow, and structured like a real-world data science repository.
-
----
+--
 
 # 🧠 Personality-Enriched Knowledge Graph (Hybrid LLM + spaCy)
 
 A hybrid pipeline that extracts entities, relationships, and personality traits from unstructured text to build an interpretable **Knowledge Graph**.
 This project combines **spaCy** for structured NLP extraction and an **LLM** for reasoning-based enrichment to produce a contextual, explainable graph of human interactions.
+## 🤖 LLM Session (ChatGPT)
+You can view the full ChatGPT conversation that guided this project here:  
+🔗 [View LLM Session](https://chatgpt.com/share/your-session-link)
 
 ---
 
