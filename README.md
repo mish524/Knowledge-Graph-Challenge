@@ -1,5 +1,3 @@
---
-
 # 🧠 Personality-Enriched Knowledge Graph (Hybrid LLM + spaCy)
 
 A hybrid pipeline that extracts entities, relationships, and personality traits from unstructured text to build an interpretable **Knowledge Graph**.
