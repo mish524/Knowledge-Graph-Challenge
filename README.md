@@ -1,2 +1,231 @@
-# Knowledge-Graph-Challenge
-This project builds a hybrid LLM–spaCy Knowledge Graph that extracts entities, relationships, and personality traits from synthetic text data. It demonstrates reasoning, data processing, and evaluation workflows guided by an LLM.
+Here’s a clean, professional **README template** for your GitHub repository — tailored for your Knowledge Graph assignment project.
+It’s concise, easy to follow, and structured like a real-world data science repository.
+
+---
+
+# 🧠 Personality-Enriched Knowledge Graph (Hybrid LLM + spaCy)
+
+A hybrid pipeline that extracts entities, relationships, and personality traits from unstructured text to build an interpretable **Knowledge Graph**.
+This project combines **spaCy** for structured NLP extraction and an **LLM** for reasoning-based enrichment to produce a contextual, explainable graph of human interactions.
+
+---
+
+## 📄 **Table of Contents**
+
+1. [Overview](#overview)
+2. [Project Structure](#project-structure)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Demo](#demo)
+6. [Report](#report)
+7. [Evaluation Metrics](#evaluation-metrics)
+8. [Results Preview](#results-preview)
+9. [Acknowledgements](#acknowledgements)
+
+---
+
+## 🔍 **Overview**
+
+This repository demonstrates a **Knowledge Graph generation workflow** for text documents that include personality traits.
+It uses:
+
+* **spaCy** for entity and relationship extraction
+* **OpenAI GPT / LLM** for trait enrichment and inferred links
+* **NetworkX** for graph construction and visualization
+
+The resulting KG connects people, relationships, and personality attributes — structured for both **human interpretation** and **machine reasoning**.
+
+---
+
+## 📁 **Project Structure**
+
+```
+📦 personality-kg
+ ┣ 📜 README.md
+ ┣ 📜 requirements.txt
+ ┣ 📜 report.pdf
+ ┣ 📜 demo_notebook.ipynb
+ ┣ 📜 synthetic_data.txt
+ ┣ 📜 extract_spacy.py
+ ┣ 📜 enrich_llm.py
+ ┣ 📜 build_graph.py
+ ┣ 📜 evaluate_metrics.py
+ ┣ 📂 visuals/
+ ┃ ┣ knowledge_graph.png
+ ┃ ┗ workflow_diagram.png
+ ┗ 📂 outputs/
+    ┣ entities_relations.json
+    ┗ final_graph.graphml
+```
+
+---
+
+## ⚙️ **Installation**
+
+### **1. Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/personality-kg.git
+cd personality-kg
+```
+
+### **2. Create and activate a virtual environment**
+
+```bash
+python -m venv venv
+source venv/bin/activate   # on macOS/Linux
+venv\Scripts\activate      # on Windows
+```
+
+### **3. Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Dependencies include:**
+
+* `spacy` – NLP entity and relationship extraction
+* `networkx` – Graph creation and visualization
+* `matplotlib` – Drawing graphs
+* `openai` – Accessing LLM enrichment (optional)
+* `pandas`, `regex`, `json` – Data manipulation
+
+*(You can also run the demo notebook without the OpenAI API by skipping the enrichment step.)*
+
+---
+
+## ▶️ **Usage**
+
+### **1. Run extraction with spaCy**
+
+```bash
+python extract_spacy.py
+```
+
+* Loads text from `synthetic_data.txt`
+* Outputs base relationships (`triples_spacy.json`)
+
+### **2. Run enrichment with LLM**
+
+```bash
+python enrich_llm.py
+```
+
+* Uses the OpenAI API to identify personality traits and implied links
+* Outputs enriched triples (`triples_enriched.json`)
+
+### **3. Build and visualize the Knowledge Graph**
+
+```bash
+python build_graph.py
+```
+
+* Creates a NetworkX graph from enriched triples
+* Saves visualization to `/visuals/knowledge_graph.png`
+* Optional: Exports `.graphml` file for Neo4j
+
+### **4. Evaluate graph quality**
+
+```bash
+python evaluate_metrics.py
+```
+
+* Computes metrics: **Precision**, **Entity Coverage**, **Connectivity**
+* Prints a short summary to the console
+
+---
+
+## 🎬 **Demo**
+
+You can also open the **interactive demo** in Jupyter Notebook:
+
+```bash
+jupyter notebook demo_notebook.ipynb
+```
+
+Inside the notebook:
+
+* Run cells sequentially to generate the KG.
+* View visual graphs and evaluation metrics inline.
+* Optionally test new sentences or personality adjectives.
+
+---
+
+## 🧾 **Report**
+
+The full written report is available here:
+📄 [`report.pdf`](./report.pdf)
+
+The report includes:
+
+* Abstract and background
+* Workflow explanation
+* Personality representation schema
+* Evaluation metrics
+* Results, insights, and limitations
+
+You can cite the report as part of your documentation or share it with interview panels.
+
+---
+
+## 📊 **Evaluation Metrics**
+
+| Metric                        | Purpose                          | Example Value |
+| ----------------------------- | -------------------------------- | ------------- |
+| **Precision**                 | % of correctly extracted triples | 0.80          |
+| **Entity Coverage**           | % of entities captured from text | 1.00          |
+| **Connectivity (avg degree)** | How connected the graph is       | 1.75          |
+
+These can be recomputed by running `evaluate_metrics.py`.
+
+---
+
+## 🖼 **Results Preview**
+
+### Example Triples
+
+```json
+[
+  {"subject": "Alice", "relation": "is_friends_with", "object": "Bob"},
+  {"subject": "Alice", "relation": "has_trait", "object": "kind"},
+  {"subject": "Bob", "relation": "works_with", "object": "Carol"},
+  {"subject": "Carol", "relation": "has_trait", "object": "confident"}
+]
+```
+
+### Example Visualization
+
+📍 **Output file:** `visuals/knowledge_graph.png`
+Displays nodes (people and traits) and directional edges (relationships).
+
+---
+
+## 💡 **Tips**
+
+* For larger datasets, chunk text into paragraphs before running LLM enrichment.
+* Store results in `.graphml` or `.json` for compatibility with **Neo4j** or **GraphDB**.
+* Use environment variables for your OpenAI API key:
+
+  ```bash
+  export OPENAI_API_KEY="your_api_key_here"
+  ```
+
+---
+
+## 🙌 **Acknowledgements**
+
+This project was developed as part of a take-home data science assignment on **Knowledge Graph Construction using LLMs**.
+Concepts, workflows, and documentation were created with iterative guidance from an **LLM (GPT-5)** for research reasoning and report generation.
+
+---
+
+### 📬 Contact
+
+**Author:** Uswaththa Liyanage Mishane Vishmika Perera
+**Email:** [[your.email@example.com](mailto:your.email@example.com)]
+**Location:** Colombo, Sri Lanka
+
+---
+
+Would you like me to generate a **`requirements.txt`** file next (with version suggestions for spaCy, NetworkX, matplotlib, etc.) so the project runs smoothly on any system?
