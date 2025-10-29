@@ -1,0 +1,7 @@
+Subject,Relation,Object
+Bob,has_trait,ambitious
+Alice,has_trait,kind
+Alice,friends_with,Bob
+Bob,works_with,Carol
+Carol,has_trait,confident
+Carol,mentors,Dave
