@@ -13,7 +13,7 @@ This project combines **spaCy** for structured NLP extraction and an **LLM** for
 ## 📄 **Table of Contents**
 
 1. [Overview](#Overview)
-2. [Project Structure](#project-structure)
+2. [Project Structure](#README.md#-project-structure)
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Demo](#demo)
