@@ -40,22 +40,17 @@ The resulting KG connects people, relationships, and personality attributes — 
 ## 📁 **Project Structure**
 
 ```
-📦 personality-kg
+📦 knowledge-graph-challenge
  ┣ 📜 README.md
  ┣ 📜 requirements.txt
- ┣ 📜 report.pdf
- ┣ 📜 demo_notebook.ipynb
+ ┣ 📜 report.md
+ ┣ 📜 Knowledge Graph.ipynb
  ┣ 📜 synthetic_data.txt
- ┣ 📜 extract_spacy.py
- ┣ 📜 enrich_llm.py
- ┣ 📜 build_graph.py
- ┣ 📜 evaluate_metrics.py
- ┣ 📂 visuals/
- ┃ ┣ knowledge_graph.png
- ┃ ┗ workflow_diagram.png
  ┗ 📂 outputs/
-    ┣ entities_relations.json
-    ┗ final_graph.graphml
+    ┣ triplets.csv
+    ┣ evaluation_metrics.csv
+    ┗ graph.png
+
 ```
 
 ---
@@ -155,7 +150,7 @@ Inside the notebook:
 ## 🧾 **Report**
 
 The full written report is available here:
-📄 [`report.pdf`](./report.pdf)
+📄 [`report`](./report.md)
 
 The report includes:
 
