@@ -12,7 +12,7 @@ This project combines **spaCy** for structured NLP extraction and an **LLM** for
 
 ## 📄 **Table of Contents**
 
-1. [Overview](#overview)
+1. [Overview](#Overview)
 2. [Project Structure](#project-structure)
 3. [Installation](#installation)
 4. [Usage](#usage)
@@ -222,10 +222,8 @@ Concepts, workflows, and documentation were created with iterative guidance from
 
 ### 📬 Contact
 
-**Author:** Uswaththa Liyanage Mishane Vishmika Perera
-**Email:** [[your.email@example.com](mailto:your.email@example.com)]
+**Author:** Mishane Vishmika Perera
+**Email:** [[mishane1998@gmail.com](mailto:your.email@example.com)]
 **Location:** Colombo, Sri Lanka
 
 ---
-
-Would you like me to generate a **`requirements.txt`** file next (with version suggestions for spaCy, NetworkX, matplotlib, etc.) so the project runs smoothly on any system?
