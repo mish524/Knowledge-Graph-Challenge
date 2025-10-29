@@ -133,10 +133,10 @@ python evaluate_metrics.py
 
 ## 🎬 **Demo**
 
-You can also open the **interactive demo** in Jupyter Notebook:
+You can also open the **Knowledge Graph Notebook** in Jupyter Notebook:
 
 ```bash
-jupyter notebook demo_notebook.ipynb
+jupyter notebook Knowledge Graph.ipynb
 ```
 
 Inside the notebook:
@@ -164,17 +164,17 @@ You can cite the report as part of your documentation or share it with interview
 
 ---
 
-## 📊 **Evaluation Metrics**
+## 📊 Evaluation Metrics
 
-| Metric                        | Purpose                          | Example Value |
-| ----------------------------- | -------------------------------- | ------------- |
-| **Precision**                 | % of correctly extracted triples | 0.80          |
-| **Entity Coverage**           | % of entities captured from text | 1.00          |
-| **Connectivity (avg degree)** | How connected the graph is       | 1.75          |
+| Metric                        | Purpose                                         | Result |
+| ------------------------------ | ----------------------------------------------- | ------- |
+| **Precision**                  | Percentage of correctly extracted triples       | 0.67 |
+| **Recall**                     | Percentage of all true triples successfully found | 1.00 |
+| **F1-score**                   | Harmonic mean of precision and recall (balance) | 0.80 |
+| **Entity Coverage**            | Proportion of entities from the text captured in the graph | 1.00 |
+| **Connectivity (avg degree)**  | Average number of connections per node in the graph | 1.75 |
 
-These can be recomputed by running `evaluate_metrics.py`.
-
----
+All metrics can be recomputed by re-running the evaluation cell or script `evaluate_metrics.py`.
 
 ## 🖼 **Results Preview**
 
@@ -191,7 +191,7 @@ These can be recomputed by running `evaluate_metrics.py`.
 
 ### Example Visualization
 
-📍 **Output file:** `visuals/knowledge_graph.png`
+📍 **Output file:** `outputs/graph.png`
 Displays nodes (people and traits) and directional edges (relationships).
 
 ---
