@@ -191,7 +191,7 @@ All metrics can be recomputed by re-running the evaluation cell or script `evalu
 
 ### Example Visualization
 
-📍 **Output file:** `outputs/graph.png`
+📍 **Output file:** `outputs/graph.png`(./outputs/graph.png)
 Displays nodes (people and traits) and directional edges (relationships).
 
 ---
