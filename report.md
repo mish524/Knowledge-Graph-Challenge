@@ -186,21 +186,34 @@ Normalization ensured **clean, non-redundant graph structure** and allowed consi
 
 ## **Evaluation & Metrics**
 
-Three simple yet meaningful evaluation checks were conducted to assess KG quality:
+Three simple yet meaningful evaluation checks were conducted to assess Knowledge Graph (KG) quality:
 
-| Metric                   | Purpose                                      | Calculation                          | Example      |
-| ------------------------ | -------------------------------------------- | ------------------------------------ | ------------ |
-| **Precision of Triples** | Measures accuracy of extracted relationships | `correct ÷ total` after manual check | 15/20 = 0.75 |
-| **Entity Coverage**      | Assesses completeness of entity extraction   | `extracted ÷ expected`               | 8/8 = 1.0    |
-| **Connectivity Ratio**   | Evaluates how well nodes are linked          | `avg node degree = Σ(degree)/N`      | 1.8          |
+| Metric                        | Purpose                                          | Calculation / How to Compute |
+|-------------------------------|--------------------------------------------------|------------------------------|
+| **Precision of Triples**      | Measures accuracy of extracted relationships     | true positives ÷ predicted total (manual check or gold-standard comparison) |
+| **Recall of Triples**         | Measures completeness of extraction              | true positives ÷ actual total in gold set |
+| **F1-score**                  | Harmonic mean of precision and recall (balance)  | 2 * (precision * recall) / (precision + recall) |
+| **Entity Coverage**           | Assesses completeness of entity extraction       | extracted unique entities ÷ expected unique entities in text |
+| **Connectivity (avg degree)** | Evaluates how well nodes are linked              | average node degree = Σ(degree) / N |
 
-### Results
+---
 
-* **Precision:** ~80% (most relationships correct)
-* **Entity Coverage:** 100% (all entities detected)
-* **Average Node Degree:** 1.75 (good linkage, low isolation)
+### **Results**
 
-These scores demonstrate that the pipeline captures relationships accurately and forms a meaningful, interconnected graph.
+Precision = **0.67**, Recall = **1.00**, F1-score = **0.80**,  
+Entity Coverage = **1.00**, Connectivity (avg degree) = **1.75**
+
+**Key Takeaways:**
+- **Precision (0.67):** Most extracted triples were correct, though some false positives occurred.  
+- **Recall (1.00):** All true relationships were successfully identified — excellent completeness.  
+- **F1-score (0.80):** Indicates a strong overall balance between accuracy and coverage.  
+- **Entity Coverage (1.00):** Every entity mentioned in the text was captured in the graph.  
+- **Connectivity (1.75):** Nodes are well connected, forming a coherent and interpretable structure.
+
+**Interpretation:**  
+The hybrid pipeline achieves full recall and entity coverage, producing a complete and meaningful Knowledge Graph.  
+Precision can be further improved by refining relation extraction or adding a light LLM-based validation step.
+
 
 ---
 
